@@ -23,7 +23,7 @@ public class MainPage extends BasePage {
     }
 
     public void searchPressEnter(){
-        // Sendkeys method already completes the search just re-searches.
+        // Sendkeys method already completes the search, this method just re-searches.
         findElement(SEARCH_BOX).sendKeys(Keys.ENTER);
     }
 
