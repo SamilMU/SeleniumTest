@@ -3,6 +3,7 @@ package first_ver.base;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -17,7 +18,9 @@ public class BaseTest {
     public static void setUp(){
 
         System.setProperty("webdriver.chrome.driver","E:\\Testinium\\chromedriver.exe");
-        setDriver(new ChromeDriver());
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("start-maximized");
+        setDriver(new ChromeDriver(options));
         getDriver().get("https://www.kitapyurdu.com");
 
     }

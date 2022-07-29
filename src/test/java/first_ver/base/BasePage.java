@@ -18,11 +18,14 @@ public class BasePage {
 
     public WebElement findElement(By by){
         wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(by));
-        if(driver.findElement(by) == null){
-            throw new NotFoundException("Required Element is not found.");
-        }else{
-            return driver.findElement(by);
-        }
+        return driver.findElement(by);
     }
 
+    public void checkElement(By by){
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(by));
+    }
+
+    public void checkElementText(WebElement element, String str) {
+        wait.until(ExpectedConditions.textToBePresentInElement(element, str));
+    }
 }

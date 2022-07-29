@@ -6,6 +6,8 @@ import first_ver.page.MainPage;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.io.IOException;
+
 
 public class MainPageTest extends BaseTest {
 
@@ -18,10 +20,8 @@ public class MainPageTest extends BaseTest {
     }
 
     @Test
-    public void mainPageTest(){
-        System.out.println("Test");
-        mainPage.searchBox().sendKeys("roman");
-        mainPage.searchButton().click();
+    public void mainPageTest() throws IOException {
+        mainPage.pageLoadedCheck().fillSearchBox(readFromCsv("testfile.csv")).clickSearchButton();
     }
 
 }
