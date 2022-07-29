@@ -20,8 +20,7 @@ public class MainTest extends BaseTest {
     CartPage cartPage;
 
     @BeforeEach
-    public void setUpTest(){
-        System.out.println("Before action is taken");
+    public void setUpTest() {
         mainPage = new MainPage(getDriver());
         searchPage = new SearchPage(getDriver());
         productPage = new ProductPage(getDriver());
@@ -31,26 +30,26 @@ public class MainTest extends BaseTest {
     @Test
     @Order(1)
     public void mainPageTest() throws IOException {
-        mainPage.pageLoadedCheck().fillSearchBox(readFromCsv("testfile.csv")).clickSearchButton();
+        mainPage.pageLoadedCheck().fillSearchBox(readFromCsv("testfile.csv")).searchPressEnter();
     }
 
     @Test
     @Order(2)
-    public void searchPageTest(){
+    public void searchPageTest() {
         Random rand = new Random();
         int int_random = rand.nextInt(20);
-        searchPage.selectBook(int_random);
+        searchPage.selectRandomProduct(int_random);
     }
 
     @Test
     @Order(3)
-    public void productPageTest(){
+    public void productPageTest() {
         productPage.addToCart().checkCart().clickCart().goToCartPage();
     }
 
     @Test
     @Order(4)
-    public void cartPageTest(){
+    public void cartPageTest() {
         cartPage.incrementProductQuantity().refreshCartPage().updateCheck().emptyCart().cartEmptyCheck();
         quitDriver();
     }

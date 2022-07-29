@@ -4,8 +4,6 @@ import first_ver.base.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import java.util.List;
-
 import static first_ver.constants.AllConstants.*;
 
 public class SearchPage extends BasePage {
@@ -14,11 +12,12 @@ public class SearchPage extends BasePage {
         super(driver);
     }
 
-    public void selectBook(int number){
-        // Get All the results
-        List<WebElement> allChildElements = findElement(RESULT_TABLE).findElements(SEARCH_RESULTS);
-        // Select one at random.
-        allChildElements.get(number).findElement(SINGLE_RESULT).findElement(SEARCH_RESULT_NAME).click();
+    public void selectRandomProduct(int number) {
+
+        // Select a result
+        WebElement randomSelectedProduct = findElement(RESULT_TABLE).findElements(SEARCH_RESULTS).get(number);
+        // Go to product Page
+        randomSelectedProduct.findElement(RESULT_SELECTABLE_GRID).findElement(SEARCH_RESULT_NAME).click();
 
     }
 }

@@ -22,7 +22,7 @@ public class SearchResultTest extends BaseTest {
     public void searchPageTest() {
         Random rand = new Random();
         int int_random = rand.nextInt(20);
-        searchPage.selectBook(int_random);
+        searchPage.selectRandomProduct(int_random);
         quitDriver();
     }
 

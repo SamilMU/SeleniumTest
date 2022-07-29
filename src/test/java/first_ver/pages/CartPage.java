@@ -17,17 +17,18 @@ public class CartPage extends BasePage {
 
 
     public CartPage refreshCartPage() {
-        findElement(REFRESH_CART_BUTTON).click();
+        click(REFRESH_CART_BUTTON);
         return this;
     }
 
     public CartPage emptyCart() {
-        findElement(EMPTY_CART_BUTTON).click();
+        click(EMPTY_CART_BUTTON);
         return this;
     }
 
     public CartPage updateCheck() {
         findElement(CART_UPDATE_NOTIFICATION);
+        findElement(CART_UPDATE_NOTIFICATION_TEXT);
         return this;
     }
 

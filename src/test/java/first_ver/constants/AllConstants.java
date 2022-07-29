@@ -11,7 +11,7 @@ public class AllConstants {
     /** Search Page */
     public static final By RESULT_TABLE = By.id("product-table");
     public static final By SEARCH_RESULTS = By.className("product-cr");
-    public static final By SINGLE_RESULT = By.cssSelector(".grid_7.omega");
+    public static final By RESULT_SELECTABLE_GRID = By.cssSelector(".grid_7.omega");
     public static final By SEARCH_RESULT_NAME = By.cssSelector(".name");
 
     /** Product Page */
@@ -25,6 +25,7 @@ public class AllConstants {
     public static final By REFRESH_CART_BUTTON = By.cssSelector(".fa.fa-refresh.green-icon");
     public static final By EMPTY_CART_BUTTON = By.cssSelector(".remove");
     public static final By CART_UPDATE_NOTIFICATION = By.id("swal2-title");
+    public static final By CART_UPDATE_NOTIFICATION_TEXT = By.xpath("//*[text()='Sepetiniz güncelleniyor!']");
     public static final By CART_INFO = By.className("cart-info");
 
 }

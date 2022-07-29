@@ -16,16 +16,16 @@ public class ProductPage extends BasePage {
     }
 
     public ProductPage addToCart() {
-        findElement(ADD_TO_CART_BUTTON).click();
+        click(ADD_TO_CART_BUTTON);
         return this;
     }
     public ProductPage clickCart() {
-        findElement(CART_BUTTON).click();
+        click(CART_BUTTON);
         return this;
     }
 
     public void goToCartPage() {
-        findElement(GO_TO_CART_BUTTON).click();
+        click(GO_TO_CART_BUTTON);
     }
 
 

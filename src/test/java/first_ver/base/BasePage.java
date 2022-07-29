@@ -48,4 +48,9 @@ public class BasePage {
             driver.quit();
         }
     }
+
+    public void click(By by){
+        wait.until(ExpectedConditions.elementToBeClickable(by));
+        findElement(by).click();
+    }
 }

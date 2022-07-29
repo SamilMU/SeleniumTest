@@ -1,6 +1,7 @@
 package first_ver.pages;
 
 import first_ver.base.BasePage;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
 import static first_ver.constants.AllConstants.*;
@@ -22,7 +23,11 @@ public class MainPage extends BasePage {
     }
 
     public void clickSearchButton() {
-        findElement(SEARCH_BUTTON).click();
+        click(SEARCH_BUTTON);
+    }
+
+    public void searchPressEnter(){
+        findElement(SEARCH_BOX).sendKeys(Keys.ENTER);
     }
 
 
