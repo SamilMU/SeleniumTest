@@ -2,17 +2,17 @@ package first_ver.test;
 
 
 import first_ver.base.BaseTest;
-import first_ver.page.ProductPage;
-import first_ver.page.CartPage;
-import first_ver.page.MainPage;
-import first_ver.page.SearchPage;
+import first_ver.pages.ProductPage;
+import first_ver.pages.CartPage;
+import first_ver.pages.MainPage;
+import first_ver.pages.SearchPage;
 import org.junit.jupiter.api.*;
 
 import java.io.IOException;
 import java.util.Random;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class AllTests extends BaseTest {
+public class MainTest extends BaseTest {
 
     SearchPage searchPage;
     MainPage mainPage;

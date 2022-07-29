@@ -1,4 +1,4 @@
-package first_ver.page;
+package first_ver.pages;
 
 import first_ver.base.BasePage;
 import org.openqa.selenium.Keys;

@@ -1,7 +1,7 @@
 package first_ver.test;
 
 import first_ver.base.BaseTest;
-import first_ver.page.CartPage;
+import first_ver.pages.CartPage;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
