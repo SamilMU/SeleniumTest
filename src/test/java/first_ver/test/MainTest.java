@@ -37,7 +37,7 @@ public class MainTest extends BaseTest {
     @Order(2)
     public void searchPageTest() {
         Random rand = new Random();
-        int int_random = rand.nextInt(20);
+        int int_random = rand.nextInt(5);
         searchPage.selectRandomProduct(int_random);
     }
 
@@ -51,7 +51,8 @@ public class MainTest extends BaseTest {
     @Order(4)
     public void cartPageTest() {
         cartPage.incrementProductQuantity().refreshCartPage().updateCheck().emptyCart().cartEmptyCheck();
-        quitDriver();
+        cleanUp();
+        tearDown();
     }
 
 

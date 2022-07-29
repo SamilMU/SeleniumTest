@@ -22,11 +22,8 @@ public class MainPage extends BasePage {
         return this;
     }
 
-    public void clickSearchButton() {
-        click(SEARCH_BUTTON);
-    }
-
     public void searchPressEnter(){
+        // Sendkeys method already completes the search just re-searches.
         findElement(SEARCH_BOX).sendKeys(Keys.ENTER);
     }
 

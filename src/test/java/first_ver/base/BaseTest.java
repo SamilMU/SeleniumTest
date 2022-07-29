@@ -33,7 +33,8 @@ public class BaseTest {
         BaseTest.driver = driver;
     }
 
-    public void quitDriver(){
+    public void cleanUp(){getDriver().manage().deleteAllCookies();}
+    public void tearDown(){
         getDriver().quit();
     }
 
